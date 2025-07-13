@@ -1,4 +1,5 @@
-#peça duas strings e diga se elas são iguais ou diferentes ou se uma esta contida na outra
+#Peça duas strings e diga se elas são iguais ou diferentes ou se uma esta contida na outra
+
 def comparar_strings():
     string1 = input("Digite a primeira string: ")
     string2 = input("Digite a segunda string: ")

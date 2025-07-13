@@ -1,6 +1,4 @@
-"""DESAFIO 1
-
-Peça o tempo (em minutos) para correr 5 km e classifique:
+"""Peça o tempo (em minutos) para correr 5 km e classifique:
 
 A: até 25 min → Atleta
 

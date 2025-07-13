@@ -1,3 +1,15 @@
+"""Permita ao usuário fazer uma lista de compras interativa:
+
+Adicionar item (nome, quantidade)
+
+Ver lista de compras
+
+Marcar item como comprado
+
+Remover item da lista
+
+Sair"""
+
 def ver_lista(dicionario_compras: dict):
     print('-.-'*20)   
     if not dicionario_compras:

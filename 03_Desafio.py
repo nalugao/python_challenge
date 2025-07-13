@@ -1,3 +1,7 @@
+"""O computador sorteia um número par entre 2 e 100.
+
+O usuário deve adivinhar qual é, com dicas se o palpite está acima ou abaixo."""
+
 import random
 
 def numero_aleatorio():

@@ -1,6 +1,5 @@
-# Peça ao usuário o salário e o tempo de casa (em anos). Se o funcionário tiver mais de 5 anos, recebe 10% de bônus; senão, recebe 5%.
-# Mostre o valor do bônus e o novo salário.
-
+"""Peça ao usuário o salário e o tempo de casa (em anos). Se o funcionário tiver mais de 5 anos, recebe 10% de bônus; senão, recebe 5%.
+Mostre o valor do bônus e o novo salário."""
 
 def ajuste_salario():
     aumento1 = 0.05

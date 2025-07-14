@@ -5,14 +5,14 @@ Marcar item como comprado
 Remover item da lista
 Sair"""
 
-def ver_lista(dicionario_compras: dict):
+def ver_lista(dicionario_compras):
     print('-.-'*20)   
     if not dicionario_compras:
         print('A lista está vazia. Adicione itens pressionando a opção 2 no Menu.')
         print('-.-'*20)
         return
     
-    print('Lista de compras:')
+    print('Lista de compras:\n')
     for nome_item, item_detalhes in dicionario_compras.items():
         checked = item_detalhes["checked"]
         quantidade = item_detalhes["qtd"]
@@ -24,38 +24,38 @@ def ver_lista(dicionario_compras: dict):
         
 def adicionar_item(dicionario_compras):
     print('-.-'*20)
-    nome_item = input('Nome do item: ')
-    print('-.-'*20)
-    qtd = int(input('Quantidade: '))
-    print('-.-'*20)
-    print('Item inserido na lista de compras com sucesso!')
-    print('-.-'*20)
+    nome_item = input('Nome do item: ').strip().title()
+    qtd = int(input('Quantidade para item novo || Quantidade para somar em item já existente: ')) 
     
-    dicionario_compras[nome_item] = {
-        "qtd": qtd,
-        "checked": False
-    }
+    if nome_item in dicionario_compras:
+        print(f'\nEsse item já está na lista. A quantidade foi atualizada.')
+        dicionario_compras[nome_item]['qtd'] += qtd
+    else:
+        dicionario_compras[nome_item] = {
+            "qtd": qtd,
+            "checked": False
+        }
+        print('\nItem inserido na lista de compras com sucesso!')
+    print('-.-'*20)
     
 def marcar_item(dicionario_compras):
     print('-.-'*20)
-    nome_item = input('Nome do item que foi comprado: ')
+    nome_item = input('Nome do item que foi comprado: ').strip().title()
     if not nome_item in dicionario_compras:
         print('Erro: solicitação não concluída pois esse item não consta na lista de compras.')
         return # finaliza função e volta para o menu    
-    print('-.-'*20)
-    print('Este item foi comprado!')
+    print('\nEste item foi comprado!')
     print('-.-'*20)   
     
     dicionario_compras[nome_item]['checked'] = True
 
 def remover_item(dicionario_compras):
     print('-.-'*20)
-    nome_item = input('Nome do item que será removido: ')
+    nome_item = input('Nome do item que será removido: ').strip().title()
     if not nome_item in dicionario_compras:
         print('Erro: solicitação não concluída pois esse item não consta na lista de compras.')
         return
-    print('-.-'*20)
-    print('Item removido da lista de compras com sucesso!')
+    print('\nItem removido da lista de compras com sucesso!')
     print('-.-'*20)
     
     dicionario_compras.pop(nome_item)
@@ -65,7 +65,7 @@ def main():
         
     }
         
-    print('Bem vinda(o) a sua lista de compras!')
+    print('\nBem vinda(o) a sua lista de compras!')
 
     while True:
         print('='*50)

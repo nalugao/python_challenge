@@ -77,7 +77,7 @@ def main():
         print('‖'+' '+'4. Remover item'+' '*32+'‖')
         print('‖'+' '+'5. Sair'+' '*40+'‖')
         print('='*50)
-        opcao = input('Escolha uma opção: ')
+        opcao = input('Insira o número da opção desejada: ')
         
         if opcao == "1" : 
             ver_lista(dicionario_compras)
